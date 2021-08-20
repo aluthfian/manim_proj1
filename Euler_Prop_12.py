@@ -14,7 +14,7 @@ class PropEuclid12(Scene):
         judul = Text("Proposisi #12 Euclid\n \'Elements\' Buku 1", should_center=False).move_to([-5,3,0]).scale(0.5)
         self.play(Write(judul))
         
-        teks1 = Text("Tugas: \n Buatlah garis melewati C,\n dan tegak lurus AB", should_center=True).move_to([4.7,3,0]).scale(0.45)
+        teks1 = Text("Tugas: \n Buatlah garis melewati C\n dan tegak lurus AB", should_center=True).move_to([4.7,3,0]).scale(0.45)
         self.play(Write(teks1))
         
         titik_A = Dot(point=[-6,-2.25,0], radius=0.08)
@@ -34,7 +34,7 @@ class PropEuclid12(Scene):
         self.play(Write(C))
         self.wait(2)
         
-        teks2 = Text("1.) Buat titik D di,\n sisi sebalik titik C", should_center=True).move_to([4.7,3,0]).scale(0.45)
+        teks2 = Text("1.) Buat titik D di\n sisi sebalik titik C", should_center=True).move_to([4.7,3,0]).scale(0.45)
         self.play(FadeTransform(teks1, teks2))
         
         titik_D = Dot(point=[1.5,-3.25,0], radius=0.08, color='#8a8889')
@@ -44,7 +44,7 @@ class PropEuclid12(Scene):
         self.play(Write(D))
         self.wait(2)
         
-        teks3 = Text("2.) Buat lingkaran melewati D,\n dan berpusat di C", should_center=True).move_to([4.7,3,0]).scale(0.45)
+        teks3 = Text("2.) Buat lingkaran melewati D\n dan berpusat di C", should_center=True).move_to([4.7,3,0]).scale(0.45)
         self.play(ReplacementTransform(teks2, teks3))
         
         jarijari = np.linalg.norm(titik_D.get_center()-titik_C.get_center())
@@ -102,6 +102,6 @@ class PropEuclid12(Scene):
         teks7 = Text("6.) Garis CH tegak lurus\n garis AB.", should_center=True).move_to([4.7,3,0]).scale(0.45)
         self.play(FadeTransform(teks6, teks7))
         
-        sudutsiku = Square(color='#eda09a', fill_opacity=0.3, side_length=0.5, stroke_width=0).move_to(titik_H.get_center()+[0.25,0.25,0])
+        sudutsiku = Square(color='#eda09a', fill_opacity=0.5, side_length=0.5, stroke_width=0).move_to(titik_H.get_center()+[0.25,0.25,0])
         self.play(Create(sudutsiku))
         self.wait(5.0)
