@@ -79,7 +79,7 @@ class PropEuclid12(Scene):
         
         titik_H = Dot(point=[np.amin([pos_Gx, pos_Ex]) + abs(pos_Ex - pos_Gx)/2,titik_A.get_y(),0], radius=0.08)
         
-        H = Text("H", font="sans-serif").next_to(titik_H.get_center()+[0.2,0,0], DOWN)
+        H = Text("H", font="sans-serif").next_to(titik_H.get_center()+[0.3,0,0], DOWN)
         
         self.add(titik_H)
         self.play(Write(H))
@@ -102,6 +102,6 @@ class PropEuclid12(Scene):
         teks7 = Text("6.) Garis CH tegak lurus\n garis AB.", should_center=True).move_to([4.7,3,0]).scale(0.45)
         self.play(FadeTransform(teks6, teks7))
         
-        sudutsiku = Square(color='#a1261d', fill_opacity=0.5, side_length=0.5).move_to(titik_H.get_center()+[0.25,0.25,0])
+        sudutsiku = Square(color='#eda09a', fill_opacity=0.3, side_length=0.5, stroke_width=0).move_to(titik_H.get_center()+[0.25,0.25,0])
         self.play(Create(sudutsiku))
         self.wait(5.0)
